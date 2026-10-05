@@ -18,16 +18,6 @@ Refonte de l'alpha fourni pour le projet Nin-tage.
 - HTML, CSS et JavaScript séparés
 - Compatible avec un hébergement statique type GitHub Pages
 
-## Lancer localement
-
-Un navigateur peut refuser certaines ressources si tu ouvres `index.html` directement en `file://`.
-Utilise un petit serveur HTTP :
-
-```bash
-python -m http.server 8000
-```
-
-Puis ouvre `http://localhost:8000/`.
 
 ## Ajouter un jeu
 
@@ -36,8 +26,7 @@ Ajoute une entrée dans `data/games.json`, puis place :
 - la miniature dans `assets/images/games/`
 - la ROM dans `roms/nes/` ou `roms/gameboy/`
 - le manuel PDF dans `assets/manuals/`
-
-Ne mets dans le dépôt que des ROMs et manuels dont tu as les droits nécessaires.
+- 
 
 ## À propos d'EmulatorJS
 
