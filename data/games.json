@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mega-man-ii",
+    "title": "Mega Man II",
+    "platform": "nes",
+    "year": 1990,
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Action / Plateforme",
+    "tags": [
+      "Plateformer",
+      "Classique",
+      "Difficile"
+    ],
+    "thumbnail": "./assets/images/games/mega-man-ii.svg",
+    "romUrl": "./roms/nes/mega-man-ii.nes",
+    "description": "Une fiche de démonstration destinée à accueillir l'émulation, le manuel, l'histoire et les commentaires.",
+    "manual": "./assets/manuals/mega-man-ii.pdf"
+  },
+  {
+    "id": "kirby-dream-land",
+    "title": "Kirby's Dream Land",
+    "platform": "gameboy",
+    "year": 1992,
+    "developer": "HAL Laboratory",
+    "publisher": "Nintendo",
+    "genre": "Plateforme",
+    "tags": [
+      "Game Boy",
+      "Accessible",
+      "Classique"
+    ],
+    "thumbnail": "./assets/images/games/kirby-dream-land.svg",
+    "romUrl": "./roms/gameboy/kirby-dream-land.gb",
+    "description": "Démo de fiche Game Boy. Remplace la miniature et ajoute la ROM légalement utilisable.",
+    "manual": "./assets/manuals/kirby-dream-land.pdf"
+  },
+  {
+    "id": "metroid",
+    "title": "Metroid",
+    "platform": "nes",
+    "year": 1986,
+    "developer": "Nintendo R&D1",
+    "publisher": "Nintendo",
+    "genre": "Action / Exploration",
+    "tags": [
+      "Exploration",
+      "Sci-Fi",
+      "Classique"
+    ],
+    "thumbnail": "./assets/images/games/metroid.svg",
+    "romUrl": "./roms/nes/metroid.nes",
+    "description": "Troisième entrée de démonstration pour montrer le fonctionnement de la bibliothèque.",
+    "manual": "./assets/manuals/metroid.pdf"
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "platform": "gameboy",
+    "year": 1989,
+    "developer": "Bullet-Proof Software",
+    "publisher": "Nintendo",
+    "genre": "Puzzle",
+    "tags": [
+      "Puzzle",
+      "Game Boy",
+      "Indémodable"
+    ],
+    "thumbnail": "./assets/images/games/tetris.svg",
+    "romUrl": "./roms/gameboy/tetris.gb",
+    "description": "Exemple de jeu Game Boy dans la bibliothèque.",
+    "manual": "./assets/manuals/tetris.pdf"
+  }
+]

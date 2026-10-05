@@ -1,0 +1,7 @@
+{
+  "project": "Nin-tage",
+  "version": "0.2.0",
+  "frontend": "vanilla HTML/CSS/JS",
+  "emulator": "EmulatorJS stable CDN",
+  "notes": "ROMs and PDFs intentionally omitted."
+}

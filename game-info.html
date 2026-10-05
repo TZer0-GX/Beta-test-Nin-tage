@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nin-tage // Infos</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .info-layout{display:grid;grid-template-columns:1fr 300px;background:#222}
+    .info-main{padding:18px}
+    .info-block{padding:15px;border:2px solid #000;background:#292929;margin-bottom:14px}
+    .info-block h2{color:#ff8b00;margin-bottom:8px}
+    .manual{width:100%;height:600px;border:2px solid #000;background:#111}
+    .forum-post{display:grid;gap:5px;padding:10px;border-bottom:1px solid #555}
+    .forum-post b{color:#f4e600;font:11px monospace}.forum-post span{color:#ddd;line-height:1.5}
+    textarea{width:100%;min-height:100px;background:#111;color:#fff;border:2px solid #555;padding:8px;resize:vertical}
+    @media(max-width:850px){.info-layout{grid-template-columns:1fr}.manual{height:500px}}
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html"><span class="brand-mark">N</span><span class="brand-name">Nin-tage</span><span class="brand-dot">.EXE</span></a>
+      <nav class="platform-nav"><a class="platform-btn" href="./index.html">BIBLIOTHÈQUE</a><a class="platform-btn" href="./game.html?id=mega-man-ii">JOUER</a></nav>
+      <div class="account-zone"><button class="pixel-btn">CONNEXION</button></div>
+    </header>
+    <div class="ticker"><span class="ticker-label">WIKI</span><div class="ticker-track" id="gameTicker"></div></div>
+    <main class="info-layout">
+      <section class="info-main">
+        <p class="eyebrow" id="gamePlatform"></p>
+        <h1 id="gameTitle">Jeu</h1>
+        <p class="muted">Sortie : <span id="gameYear"></span></p>
+
+        <div id="historyPanel" class="info-block">
+          <h2>Histoire / Wiki</h2>
+          <p id="gameDescription"></p>
+        </div>
+
+        <div class="info-block">
+          <h2>Manuel</h2>
+          <iframe id="manualFrame" class="manual" title="Manuel du jeu"></iframe>
+        </div>
+
+        <div id="forumPanel" class="info-block" hidden>
+          <h2>Commentaires / Forum</h2>
+          <div id="forumPosts"></div>
+          <form id="commentForm">
+            <textarea id="commentInput" maxlength="2000" placeholder="Écrire un commentaire..."></textarea>
+            <button class="pixel-btn accent" type="submit">PUBLIER</button>
+          </form>
+        </div>
+      </section>
+      <aside class="sidebar">
+        <div class="panel"><div class="panel-title">NAVIGATION</div>
+          <a class="mini-item" id="playLink" href="#">▶ JOUER</a>
+          <a class="mini-item" id="forumLink" href="#">☁ FORUM</a>
+        </div>
+        <div class="panel"><div class="panel-title">ÉTAT DU PROJET</div><p style="padding:10px" class="small muted">Cette page est volontairement préparée pour recevoir plus tard les données serveur, les commentaires authentifiés et les manuels stockés par jeu.</p></div>
+      </aside>
+    </main>
+    <footer class="site-footer"><span>NIN-TAGE // WIKI</span><a href="./index.html">← Bibliothèque</a></footer>
+  </div>
+  <script type="module">
+    const p = new URLSearchParams(location.search), id = p.get("id");
+    const games = await fetch("./data/games.json").then(r=>r.json());
+    const game = games.find(g=>g.id===id)||games[0];
+    document.querySelector("#gameTicker").textContent = game.title;
+    document.querySelector("h1#gameTitle").textContent = game.title;
+    document.querySelector("#gamePlatform").textContent = game.platform.toUpperCase();
+    document.querySelector("#gameYear").textContent = game.year;
+    document.querySelector("#gameDescription").textContent = game.description;
+    document.querySelector("#manualFrame").src = game.manual;
+    document.querySelector("#playLink").href = `./game.html?id=${game.id}`;
+    document.querySelector("#forumLink").href = `./game-info.html?id=${game.id}&section=forum`;
+    if (p.get("section") === "forum") {
+      document.querySelector("#historyPanel").hidden = true;
+      document.querySelector("#forumPanel").hidden = false;
+    }
+    document.querySelector("#commentForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const input = document.querySelector("#commentInput");
+      if (!input.value.trim()) return;
+      const post = document.createElement("article");
+      post.className = "forum-post";
+      post.innerHTML = `<b>Membre local</b><span>${input.value.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}</span>`;
+      document.querySelector("#forumPosts").prepend(post);
+      input.value="";
+    });
+  </script>
+</body>
+</html>

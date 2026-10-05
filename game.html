@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nin-tage // Jeu</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/emulator.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Nin-tage</span>
+        <span class="brand-dot">.EXE</span>
+      </a>
+      <nav class="platform-nav" aria-label="Navigation">
+        <a class="platform-btn" href="./index.html">BIBLIOTHÈQUE</a>
+        <a class="platform-btn" href="./index.html?platform=nes">NES</a>
+        <a class="platform-btn" href="./index.html?platform=gameboy">GAME BOY</a>
+      </nav>
+      <div class="account-zone">
+        <span class="connection-indicator" id="gamepadStatus">MANETTE : ?</span>
+      </div>
+    </header>
+
+    <div class="ticker">
+      <span class="ticker-label">LECTEUR</span>
+      <div class="ticker-track" id="gameTicker">Chargement de la fiche...</div>
+    </div>
+
+    <nav class="tab-bar" aria-label="Sections du jeu">
+      <a class="tab" id="historyTab">HISTOIRE / MANUEL</a>
+      <a class="tab active" href="#">JOUER À CE JEU</a>
+      <a class="tab" id="forumTab">COMMENTAIRES / FORUM</a>
+    </nav>
+
+    <main class="game-layout">
+      <section class="game-main">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow" id="gamePlatform">NES</p>
+            <h1 id="gameTitle">Chargement...</h1>
+            <p class="muted" id="gameMeta"></p>
+          </div>
+          <div class="tag-row" id="gameTags"></div>
+        </div>
+
+        <section class="player-panel">
+          <div class="player-toolbar">
+            <span id="romStatus" class="status-badge">ROM : EN ATTENTE</span>
+            <button class="tiny-btn" id="fullscreenBtn">PLEIN ÉCRAN</button>
+          </div>
+          <div id="emulator" class="emulator-frame">
+            <div class="emulator-placeholder">
+              <div class="pixel-loader"></div>
+              <strong id="emulatorMessage">Initialisation du lecteur...</strong>
+              <span id="emulatorSubmessage">Ajoute la ROM indiquée dans data/games.json pour lancer ce jeu.</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="game-actions">
+          <button class="action-btn" id="favoriteBtn"><span>♥</span> <span>AJOUTER AUX FAVORIS</span></button>
+          <div class="rating-widget" aria-label="Noter le jeu de 0,5 à 5 étoiles">
+            <span class="rating-label">MA NOTE</span>
+            <div id="ratingStars" class="rating-stars"></div>
+            <span id="ratingValue">—</span>
+          </div>
+        </div>
+
+        <section class="controls-panel">
+          <div>
+            <span class="panel-kicker">COMMANDES</span>
+            <p>Clavier et manette compatibles. Le menu interne de l'émulateur permet le remappage.</p>
+          </div>
+          <div class="key-hints">
+            <kbd>↑ ↓ ← →</kbd><span>Direction</span>
+            <kbd>Z</kbd><span>A</span>
+            <kbd>X</kbd><span>B</span>
+            <kbd>Entrée</kbd><span>Start</span>
+            <kbd>Shift</kbd><span>Select</span>
+          </div>
+        </section>
+      </section>
+
+      <aside class="sidebar game-sidebar">
+        <div class="panel">
+          <div class="panel-title">FICHE RAPIDE</div>
+          <dl class="quick-facts">
+            <div><dt>Développeur</dt><dd id="gameDeveloper">—</dd></div>
+            <div><dt>Éditeur</dt><dd id="gamePublisher">—</dd></div>
+            <div><dt>Année</dt><dd id="gameYear">—</dd></div>
+            <div><dt>Genre</dt><dd id="gameGenre">—</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">RECOMMANDATIONS</div>
+          <div id="recommendations" class="mini-list"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">SAUVEGARDES</div>
+          <p class="muted small">Les fonctions save/load sont fournies par l'émulateur. Les sauvegardes locales ne sont pas encore synchronisées au compte utilisateur.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <span>NIN-TAGE // PLAYER</span>
+      <a href="./index.html">← Retour bibliothèque</a>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/game.js"></script>
+</body>
+</html>
