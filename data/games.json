@@ -87,7 +87,7 @@
     "thumbnail": "./assets/images/games/BastonBallonEU.jpg",
     "romUrl": "./roms/nes/BastonBallonEU.nes",
     "description": "Un jeu très simple et pourtant très divertissant, le 1er jeu de Satoru Iwata, ancien PDG de Nintendo.",
-    "manual": "/assets/manual/BastonBallonEU.pdf"
+    "manual": "./assets/manual/BastonBallonEU.pdf"
   },
   {
     "id": "jimlever2terre",
