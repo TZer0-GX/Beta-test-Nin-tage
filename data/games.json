@@ -3,7 +3,7 @@
     "id": "mega-man-ii",
     "title": "Mega Man II",
     "platform": "nes",
-    "year": 1990,
+    "year": 1988,
     "developer": "Capcom",
     "publisher": "Capcom",
     "genre": "Action / Plateforme",
@@ -31,8 +31,8 @@
       "Classique"
     ],
     "thumbnail": "./assets/images/games/kirby-dream-land.svg",
-    "romUrl": "./roms/gameboy/kirby-dream-land.gb",
-    "description": "Démo de fiche Game Boy. Remplace la miniature et ajoute la ROM légalement utilisable.",
+    "romUrl": "./roms/gameboy/TotalementKirbySurGameBoyTkt.sfc",
+    "description": "Bon, y a peut-être tromperie sur la marchandise mais c'était pour tester, ok ?",
     "manual": "./assets/manuals/kirby-dream-land.pdf"
   },
   {
@@ -48,8 +48,8 @@
       "Incontournable",
       "Mario"
     ],
-    "thumbnail": "./assets/images/games/Mario3USA",
-    "romUrl": "./roms/nes/SuperBoss3USA.nes",
+    "thumbnail": "./assets/images/games/Mario3USA.jpg",
+    "romUrl": "./roms/nes/SuperBoss3_USA_v2.nes",
     "description": "la base.",
     "manual": "./assets/manuals/SMB3USA.pdf"
   },
@@ -68,7 +68,7 @@
     ],
     "thumbnail": "./assets/images/games/tetris.svg",
     "romUrl": "./roms/gameboy/tetris.gb",
-    "description": "Exemple de jeu Game Boy dans la bibliothèque.",
+    "description": "Bah tetris quoi.... ",
     "manual": "./assets/manuals/tetris.pdf"
   }
 ]
