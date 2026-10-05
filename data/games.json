@@ -12,9 +12,9 @@
       "Classique",
       "Difficile"
     ],
-    "thumbnail": "./assets/images/games/mega-man-ii.svg",
-    "romUrl": "./roms/nes/mega-man-ii.nes",
-    "description": "Une fiche de démonstration destinée à accueillir l'émulation, le manuel, l'histoire et les commentaires.",
+    "thumbnail": "./assets/images/games/RockmanIIUSA.jpg",
+    "romUrl": "./roms/nes/Rock2USA.nes",
+    "description": "Super fighting robot - MEGA MAN !!",
     "manual": "./assets/manuals/mega-man-ii.pdf"
   },
   {
@@ -36,22 +36,22 @@
     "manual": "./assets/manuals/kirby-dream-land.pdf"
   },
   {
-    "id": "metroid",
-    "title": "Metroid",
+    "id": "super-mario-bros-3",
+    "title": "Super Mario Bros 3",
     "platform": "nes",
-    "year": 1986,
+    "year": 1990,
     "developer": "Nintendo R&D1",
     "publisher": "Nintendo",
-    "genre": "Action / Exploration",
+    "genre": "Action / Plateformer",
     "tags": [
-      "Exploration",
-      "Sci-Fi",
-      "Classique"
+      "Plateformer",
+      "Incontournable",
+      "Mario"
     ],
-    "thumbnail": "./assets/images/games/metroid.svg",
-    "romUrl": "./roms/nes/metroid.nes",
-    "description": "Troisième entrée de démonstration pour montrer le fonctionnement de la bibliothèque.",
-    "manual": "./assets/manuals/metroid.pdf"
+    "thumbnail": "./assets/images/games/Mario3USA",
+    "romUrl": "./roms/nes/SuperBoss3USA.nes",
+    "description": "la base.",
+    "manual": "./assets/manuals/SMB3USA.pdf"
   },
   {
     "id": "tetris",
@@ -63,8 +63,8 @@
     "genre": "Puzzle",
     "tags": [
       "Puzzle",
-      "Game Boy",
-      "Indémodable"
+      "Accessible",
+      "Incontournable"
     ],
     "thumbnail": "./assets/images/games/tetris.svg",
     "romUrl": "./roms/gameboy/tetris.gb",
