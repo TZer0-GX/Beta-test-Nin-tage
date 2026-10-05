@@ -94,17 +94,17 @@
     "title": "Earthworm Jim",
     "platform": "gameboy",
     "year": "1995",
-    "developper": "Eurocom Entertainment Software",
+    "developer": "Eurocom Entertainment Software",
     "publisher": "Virgin Interactive",
     "genre": "Plateformer",
     "tags": [
       "Plateformer",
       "Demake"
     ],
-    "thumbnail": "./assets/images/games/JimLeVer2TerreUS.jpg"
-    "romUrl": "./roms/gameboy/jimlever2terreEU.gb"
+    "thumbnail": "./assets/images/games/JimLeVer2TerreUS.jpg",
+    "romUrl": "./roms/gameboy/jimlever2terreEU.gb",
     "description": "Comme si un personnage des LooneyTunes avait eu le droit à un jeu, en fait, ils ont (presque) tous eu le droit à un jeu chacun mais la plupart n'étaient pas formidables. Le rapport avec Earthworm Jim ? Ce jeu est cartoonesque et a un humour complètement décalé. Les deux premiers jeux sont vraiment des chef-d'oeuvres des générations 16 et 32 bits... Qu'en est-il de la version Gameboy et ses 4-bits ? Vous verrez par vous-même.",
-    "manual": "./assets/manual/JimLever2TerreEU.pdf"
+    "manual": "./assets/manual/JimLever2TerreEU.pdf",
   }   
     
 ]
