@@ -2,6 +2,9 @@
 
 Refonte de l'alpha fourni pour le projet Nin-tage.
 
+# JOUEZ-Y ICI : 
+https://tzer0-gx.github.io/Beta-test-Nin-tage/
+
 ## Ce qui est inclus
 
 - Bibliothèque dynamique depuis `data/games.json`
